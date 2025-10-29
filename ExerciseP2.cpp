@@ -12,7 +12,7 @@ struct studentType {
     char grade;
 };
 
-// a. Fungsi untuk membaca data
+// Fungsi untuk membaca data
 void getData(studentType s[], int n) {
     for (int i = 0; i < n; i++) {
         cout << "Masukkan Nama Depan, Nama Belakang, dan Nilai ke-" << i + 1 << ": ";
@@ -20,7 +20,7 @@ void getData(studentType s[], int n) {
     }
 }
 
-// b. Fungsi untuk menentukan grade
+// Fungsi untuk menentukan grade
 void assignGrade(studentType s[], int n) {
     for (int i = 0; i < n; i++) {
         if (s[i].testScore >= 90) s[i].grade = 'A';
@@ -31,7 +31,7 @@ void assignGrade(studentType s[], int n) {
     }
 }
 
-// c. Fungsi untuk mencari nilai tertinggi
+// Fungsi untuk mencari nilai tertinggi
 int highestScore(studentType s[], int n) {
     int highest = s[0].testScore;
     for (int i = 1; i < n; i++) {
@@ -41,7 +41,7 @@ int highestScore(studentType s[], int n) {
     return highest;
 }
 
-// d. Fungsi untuk menampilkan siswa dengan skor tertinggi
+// Fungsi untuk menampilkan siswa dengan skor tertinggi
 void printHighest(const studentType s[], int n, int highest) {
     cout << "\nSiswa dengan skor tertinggi (" << highest << "):\n";
     for (int i = 0; i < n; i++) {
@@ -72,3 +72,4 @@ int main() {
     printHighest(students, numStudents, highest);
     return 0;
 }
+
